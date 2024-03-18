@@ -28,6 +28,9 @@ body {
 nav {
     background-color: teal;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    width: 100vw;
 }
 
 .navbar a {
@@ -42,7 +45,7 @@ nav {
     margin-right: 40px;
 }
 
-.input-text {
+#searchField {
     max-width: 400px;
     padding: 10px 20px;
     border: none;
@@ -52,7 +55,7 @@ nav {
     color: black;
 }
 
-.search-box {
+#searchButton {
     margin: 0px 10px 0px 10px;
     padding: 5px 10px;
     height: 35px;
@@ -64,7 +67,7 @@ nav {
     color: white;
 }
 
-.blog-container {
+.blogContainer {
     padding: 3rem 0;
     display: flex;
     justify-content: flex-start;
@@ -72,20 +75,21 @@ nav {
     flex-wrap: wrap;
 }
 
-.card {
+.blogCard {
+    display: inline-block;
     width: 300px;
     border: 2px solid black;
     cursor: pointer;
-    padding: 1rem;
-    margin: 0.5rem;
+    padding: 1.5rem;
+    margin: 2.5rem;
     border-radius: 5px;
 }
 
-.card:hover {
+.blogCard:hover {
     box-shadow: 4px 4px 10px rgba(0.2, 0.2, 0.2, 0.7);
 }
 
-.card img {
+.blogCard img {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -93,13 +97,13 @@ nav {
     margin-bottom: 1rem;
 }
 
-.card h2 {
+.blogCard h2 {
     color: #333;
     font-size: 1.75rem;
     font-weight: 500;
 }
 
-.card p {
+.blogCard p {
     padding: 0.5rem;
     font-size: 1rem;
 }
@@ -107,6 +111,7 @@ nav {
 /* SMALL DEVICES */
 @media(max-width: 480px) {
     nav {
+        width: 100vw;
         padding: 0px 20px;
     }
 
@@ -119,7 +124,7 @@ nav {
         padding: 10px 10px;
     }
 
-    .card {
+    .blogCard {
         width: 100%;
     }
 }
